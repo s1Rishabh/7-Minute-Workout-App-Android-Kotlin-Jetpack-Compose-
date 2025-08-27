@@ -1,4 +1,4 @@
-# 7-Minute-Workout-App-Android-Kotlin-Jetpack-Compose-\\\\
+# 7-Minute-Workout-App-Android
 
 A focused 7-minute workout app with interval timer, curated exercises, spoken/audio cues, and workout history. Built with a unidirectional data flow and ViewModel-backed state for a snappy, resilient UI.
 
