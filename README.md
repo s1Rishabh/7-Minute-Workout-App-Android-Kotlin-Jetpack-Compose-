@@ -1,41 +1,49 @@
-# 7-Minute-Workout-App-Android
+# 7 Minute Workout App (Android, Kotlin)
 
-A focused 7-minute workout app with interval timer, curated exercises, spoken/audio cues, and workout history. Built with a unidirectional data flow and ViewModel-backed state for a snappy, resilient UI.
+A simple 7-minute workout app for Android. It guides you through a set of bodyweight exercises with timers and voice cues, saves your workout history, and includes a BMI calculator.
 
-Features
+## Screenshots
 
-⏱️ Interval timer (work/rest cycles, total session time)
+<p align="center">
+  <img src="Screenshot_20260316_134959_7%20Minute%20Workout%20Application.jpg" width="180" />
+  <img src="Screenshot_20260316_135005_7%20Minute%20Workout%20Application.jpg" width="180" />
+  <img src="Screenshot_20260316_135019_7%20Minute%20Workout%20Application.jpg" width="180" />
+  <img src="Screenshot_20260316_135054_7%20Minute%20Workout%20Application.jpg" width="180" />
+  <img src="Screenshot_20260316_135114_7%20Minute%20Workout%20Application.jpg" width="180" />
+</p>
 
-🧱 Preloaded exercise set (bodyweight) with images/animations
+## Features
 
-🔁 Customizable rounds and rest lengths
+- ⏱️ **Workout timer**: 10-second rest before each exercise, then a 30-second exercise timer with a circular progress bar
+- 🏋️ **Exercise list**: bodyweight exercises, each with a name and image
+- 🔊 **Voice cues**: Text-to-Speech announces the next exercise
+- 📈 **Workout history**: completed workouts are saved with their date in a local database
+- ⚖️ **BMI calculator**: supports Metric (kg / cm) and US (lbs / feet + inches) units, with a BMI category and short advice
+- ✅ **Works offline**: no internet connection needed
 
-🔊 Optional voice/TTS and vibration cues
+## Tech Stack
 
-📈 Workout history with stats (sessions, streaks, total time)
+- **Language:** Kotlin
+- **UI:** XML layouts, View Binding, Material Components
+- **Database:** Room (Entity, DAO, Database) with Kotlin Coroutines and Flow
+- **Timers:** CountDownTimer
+- **Voice:** Android Text-to-Speech
+- **Navigation:** Multiple Activities with Intents and a Toolbar back button
 
-🌚 Light/Dark theme, Material 3
+## How to Run
 
-✅ Works offline
+1. Clone the repository:
+```bash
+   git clone https://github.com/s1Rishabh/7-Minute-Workout-App-Android-Kotlin-Jetpack-Compose-.git
+```
+2. Open the project in Android Studio.
+3. Let Gradle sync.
+4. Run the app on an emulator or a real device (Android 7.0, API 24 or higher).
 
-Tech Stack
+## What I Learned
 
-UI: Jetpack Compose, Material 3
-
-State: ViewModel + Kotlin Flows/StateFlow
-
-Navigation: androidx.navigation.compose
-
-Persistence: Room (history)
-
-DI: Hilt
-
-Utilities: Kotlin Coroutines, WorkManager (reminders/notifications)
-
-Architecture
-
-Presentation: Composables + ViewModels (UDF)
-
-Domain: Use cases for timer control, history, and exercise catalog
-
-Data: Repositories (Room + in-memory exercise provider)
+- Building screens with XML layouts and accessing views with View Binding
+- Managing timers and cancelling them correctly in the Activity lifecycle
+- Saving and reading data with Room, Coroutines and Flow
+- Using Text-to-Speech in an Android app
+- Debugging crashes with Logcat and fixing Gradle and dependency version issues
